@@ -1,6 +1,6 @@
 /* Variable */
 :root {
-  --main-color: #ed4b4b;
+  --main-color: #e05656;
   --blue: #0000ff;
   --blue-dark: #030336;
   --orange: #f1a501;
@@ -39,7 +39,11 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
-  padding: 5vh;
+  padding: 5vh 15px;
+  font-family: "Balsamiq Sans", cursive;
+  font-family: "Jost", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
 }
 
 body::before {
@@ -53,10 +57,24 @@ body::before {
   z-index: -1;
   opacity: 0.12;
 }
+
+a {
+  text-decoration: none;
+}
+h1,
+h2 {
+  font-weight: 600;
+}
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
 img {
   max-width: 100%;
   vertical-align: middle;
-  padding: 5vh;
 }
 
 section {
@@ -64,6 +82,7 @@ section {
   border: 1px solid var(--white-alpha-40);
   min-height: 90vh;
   border-radius: 30px;
+  backdrop-filter: var(--backdrop-filter-blur);
 }
 
 .main {
@@ -71,7 +90,6 @@ section {
   margin: auto;
 }
 .container {
-  background-color: rgb(172, 18, 18);
   padding: 0 40px;
   width: 100%;
 }
@@ -85,19 +103,84 @@ section {
   align-items: center;
 }
 
+.hidden {
+  display: none !important;
+}
+
+/** Scrollbar **/
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+/** Button **/
+
+.btn {
+  line-height: 1.5;
+  background-color: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+  padding: 10px 30px;
+  display: inline-block;
+  border-radius: 30px;
+  color: var(--main-color);
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background-color: var(--main-color);
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn:hover {
+  color: var(--white);
+}
 /****  HOME ****/
 
 .home-section {
   display: flex;
 }
 
-.home-text {
-  background-color: blue;
+.home-text p {
+  font-size: 18px;
 }
-.home-img {
-  background-color: rgb(0, 255, 106);
+.home-text h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+}
+.home-text h2 {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 300;
+  margin: 0 0 30px;
 }
 
+.home-text .btn {
+  margin: 0 15px 15px 0;
+}
 .home-text,
 .home-img {
   width: 50%;
