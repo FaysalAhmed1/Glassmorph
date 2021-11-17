@@ -5,8 +5,8 @@
   --blue-dark: #030336;
   --orange: #f1a501;
   --green-yellow: #c3ec53;
-  --pink-light: #ffcbfc;
-  --cyan-light: #9ce0e9;
+  --pink-light: #ffa7fb;
+  --cyan-light: #61dff0;
   --white: #ffffff;
   --white-alpha-40: rgba(255, 255, 255, 0.4);
   --white-alpha-25: rgba(255, 255, 255, 0.25);
@@ -34,6 +34,7 @@ body {
     var(--pink-light),
     var(--cyan-light)
   );
+  background-attachment: fixed;
   font-size: 16px;
   color: var(--blue-dark);
   line-height: 1.5;
@@ -105,6 +106,23 @@ section {
 
 .hidden {
   display: none !important;
+}
+
+.sec-padding {
+  padding: 80px 0;
+}
+/** Section title **/
+
+.section-title {
+  padding: 0 15px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  text-transform: capitalize;
 }
 
 /** Scrollbar **/
@@ -189,11 +207,29 @@ section {
   max-width: 360px;
   background-color: var(--white-alpha-25);
   border-radius: 50%;
-  border: 10px solid var(--white-alpha-25);
+  border: 10px solid var(--white-alpha-40);
   margin: auto;
 }
 
 .home-img .img-box img {
   width: 100%;
   border-radius: 50%;
+}
+
+/*   About Section */
+
+.about-img {
+  width: 40%;
+  padding: 0 15px;
+}
+.about-text {
+  padding: 0 15px;
+  width: 60%;
+}
+.about-img .img-box {
+  background-color: var(--white-alpha-25);
+  max-width: 380px;
+  border: 10px solid var(--white-alpha-40);
+  margin: auto;
+  border-radius: 10px;
 }
