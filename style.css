@@ -40,7 +40,7 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
-  padding: 5vh 15px;
+  padding: 4vh 15px;
   font-family: "Balsamiq Sans", cursive;
   font-family: "Jost", sans-serif;
   font-family: "Rubik", sans-serif;
@@ -222,7 +222,79 @@ button {
     opacity: 0;
   }
 }
+@keyframes zoomInOut {
+  0%,
+  100% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
 
+@keyframes bounceTop {
+  0%,
+  100% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+}
+/****  circles ****/
+
+.bg-circles {
+  position: fixed;
+  top: 0;
+  height: 100%;
+
+  max-width: 1200px;
+  width: calc(100% - 30px);
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.bg-circles div {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.bg-circles .circle-1 {
+  height: 60px;
+  width: 60px;
+  background-color: rgb(24, 4, 209);
+  left: 5%;
+  top: 10%;
+  animation: zoomInOut 8s linear infinite;
+}
+
+.bg-circles .circle-2 {
+  height: 80px;
+  width: 80px;
+  background-color: rgb(255, 35, 46);
+  left: 25%;
+  top: 50%;
+  animation: bounceTop 8s ease-in-out infinite;
+}
+
+.bg-circles .circle-3 {
+  height: 120px;
+  width: 120px;
+  background-color: rgb(255, 255, 255);
+  right: -60px;
+  top: 40%;
+  opacity: 0.7;
+  animation: bounceTop 8s ease-in-out infinite;
+}
+.bg-circles .circle-4 {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(255, 133, 52);
+  left: -30px;
+  top: 80%;
+  opacity: 0.7;
+  animation: bounceTop 8s ease-in-out infinite;
+}
 /****  header ****/
 
 .header {

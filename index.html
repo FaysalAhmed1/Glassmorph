@@ -21,6 +21,17 @@
   </head>
 
   <body>
+    <!--- Background Circle-->
+
+    <div class="bg-circles">
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+      <div class="circle-3"></div>
+      <div class="circle-4"></div>
+    </div>
+
+    <!--- Background Circle-->
+
     <div class="main">
       <!--- Header-->
       <header class="header">
@@ -32,10 +43,18 @@
             <nav class="nav">
               <div class="nav-inner">
                 <ul>
-                  <li><a href="#" class="nav-item"> Home </a></li>
-                  <li><a href="#" class="nav-item"> About </a></li>
-                  <li><a href="#" class="nav-item"> Portfolio </a></li>
-                  <li><a href="#" class="nav-item"> Contact </a></li>
+                  <li><a href="#home" class="nav-item link-item"> Home </a></li>
+                  <li>
+                    <a href="#about" class="nav-item link-item"> About </a>
+                  </li>
+                  <li>
+                    <a href="#portfolio" class="nav-item link-item">
+                      Portfolio
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#contact" class="nav-item link-item"> Contact </a>
+                  </li>
                 </ul>
               </div>
             </nav>
@@ -45,15 +64,15 @@
       <!--- END Header-->
 
       <!-- Home Section-->
-      <section class="home-section align-items-center active">
+      <section class="home-section align-items-center active" id="home">
         <div class="container">
           <div class="row align-items-center">
             <div class="home-text">
               <p>Hello</p>
               <h1>Faysal Ahemd</h1>
               <h2>Web dev</h2>
-              <a href="#" class="btn"> More about me</a>
-              <a href="#" class="btn"> portfolio</a>
+              <a href="#about" class="btn link-item"> More about me</a>
+              <a href="#portfolio" class="btn link-item"> portfolio</a>
             </div>
             <div class="home-img">
               <div class="img-box">
@@ -67,7 +86,7 @@
 
       <!--About Section-->
 
-      <section class="about-section sec-padding">
+      <section class="about-section sec-padding" id="about">
         <div class="container">
           <div class="row">
             <div class="section-title">
@@ -181,8 +200,8 @@
 
               <!-- End experience -->
 
-              <a href="#" class="btn"> Down CV</a>
-              <a href="#" class="btn"> contact</a>
+              <a href="#" target="_blank" class="btn"> Down CV</a>
+              <a href="#contact" class="btn link-item"> contact</a>
             </div>
           </div>
         </div>
@@ -192,7 +211,7 @@
 
       <!--Portfolio Section-->
 
-      <section class="portfolio-section sec-padding">
+      <section class="portfolio-section sec-padding" id="portfolio">
         <div class="container">
           <div class="row">
             <div class="section-title">
@@ -383,7 +402,7 @@
       <!--End of Portfolio Section-->
 
       <!--Contact Section-->
-      <section class="contact-section sec-padding">
+      <section class="contact-section sec-padding" id="contact">
         <div class="container">
           <div class="row">
             <div class="section-title">
