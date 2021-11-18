@@ -58,3 +58,5 @@ function portfolioItemDetails(portfolioItem) {
     ".portfolio-item-details"
   ).innerHTML;
 }
+
+/*** Toggle * */
